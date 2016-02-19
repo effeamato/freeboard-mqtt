@@ -134,7 +134,7 @@
 			client = {};
 		}
 
-		var client = new Messaging.Client(currentSettings.server,
+		var client = new Paho.MQTT.Client(currentSettings.server,
 										currentSettings.port, 
 										currentSettings.client_id);
 		client.onConnectionLost = onConnectionLost;
