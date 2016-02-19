@@ -89,7 +89,7 @@
 
 		function onConnect() {
 			console.log("Connected");
-			client.subscribe(currentSettings.topic, {qos: 1});
+			client.subscribe(currentSettings.topic, {qos:1});
 		};
 		
 		function onConnectionLost(responseObject) {
@@ -139,7 +139,6 @@
 										currentSettings.client_id);
 		client.onConnectionLost = onConnectionLost;
 		client.onMessageArrived = onMessageArrived;
-		
 		client.connect({onSuccess:onConnect, 
 						
 						userName: currentSettings.username,
